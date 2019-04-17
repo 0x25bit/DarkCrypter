@@ -5,10 +5,8 @@
 #include <vector>
 #include <string>
 #include <Windows.h>
-#include <wincrypt.h>
 #include <stdio.h>
 #include "VirtualAES.h";
-#pragma comment(lib, "crypt32.lib")
 
 #define BLOCK_LEN 128
 
@@ -148,7 +146,7 @@ void WriteToResources(LPTSTR szTargetPE, int id, LPBYTE lpBytes, DWORD dwSize) /
 	cout << "Writing Encrypted data to stub's resources\n";
 	HANDLE hResource = NULL;
 	hResource = BeginUpdateResource(szTargetPE, FALSE);
-	//LPVOID lpResLock = LockResource(lpBytes);
+	LPVOID lpResLock = LockResource(lpBytes);
 	UpdateResource(hResource, RT_RCDATA, MAKEINTRESOURCE(id), MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),(LPVOID)lpBytes, dwSize);
 	EndUpdateResource(hResource, FALSE);
 }
