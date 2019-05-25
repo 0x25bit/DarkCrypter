@@ -1,19 +1,23 @@
-DarkRat's AES_Crypter
+DarkAES Crypter
 ===========
+### DarkAES is an open-source C++ Crypter. 
+#### Coded in Visual Studio.
+
+## Features
+- AES-256 Bit Encryption
+- RunPE Method
+
+## ToDo List
+#### (High Priority to Lowest)
+
+- Anti Debugger Feature
+- Builder UI
+- Stealth Injection Method
+- Unique Stub Creation
 
 
-This is a simple file crypter. 
-1. Reads in file data.
-
-2. "Encrypts" file data using AES encryption
-
-3. Outputs file with encrypted data
-
-4. When crypted file is run, file data is decrypted in system memory
-
-5. File is then executed from system memory
 
 
 
-Education Proposal Only <3
+Education Proposal Only 
 =============================
