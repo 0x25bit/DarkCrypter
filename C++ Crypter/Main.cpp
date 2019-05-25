@@ -88,17 +88,6 @@ void encrypt(std::vector<char> rawData)
 	int dataIndex = 0; //Non resetting @rawData index for encryption
 	int copyIndex = 0; //Non resetting @rawData index for copying encrypted data.
 
-	/*
-	 * Our Block Size 16 Byte. Outer loop range has to be executablesize/16.
-	 *
-	 * First we store first 16 byte of our executable into @plaintext
-	 * We encrypt @plaintext.
-	 * @rawData index shouldnt be reset to 0. So @dataCount variable always increasing.
-	 * Thus @rawData always be like @rawData[16, 32, 64, 128 ... @executablesize]
-	 *
-	 * After encryption we copy the encrypted data into @rawData.
-	 * Again we use special index(@copyCount) which it never be reset to 0.
-	 */
 
 	for (count; count < index; count++)
 	{
@@ -123,21 +112,8 @@ void encrypt(std::vector<char> rawData)
 void enc() // The function that Encrypts the info on the FB buffer
 {
 	cout << "Encrypting the Data\n";
-
-	switch (choice)
-	{
-	case '1':
-		break;
-	case '2':
-		{
-			encrypt(file_data);
-		}
-		break;
-		return;
-	}
+	encrypt(file_data);
 }
-
-
 
 
 
