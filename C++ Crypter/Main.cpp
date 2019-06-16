@@ -31,7 +31,7 @@ void RDF() //The Function that Reads the File and Copies the stub
 	cin >> name; // Ask for input from the user and store that inputed value in the name variable
 	cout << "Output name: ";
 	cin >> output;
-	CopyFile("stub.exe", output/*L"Crypted.exe"*/, 0);// Copy stub , so we done need to download a new one each time we crypt
+	CopyFile("Stub.exe", output/*L"Crypted.exe"*/, 0);// Copy stub , so we done need to download a new one each time we crypt
 	// ofcourse we can just update the resources with new data but whatever
 	cout << "\nGetting the HANDLE of the file to be crypted\n";
 	HANDLE efile = CreateFileA(name, GENERIC_ALL,FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);	
