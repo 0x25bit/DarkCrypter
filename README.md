@@ -19,5 +19,5 @@ DarkAES Crypter
 
 
 
-Education Proposal Only 
+Educational Purposes Only 
 =============================
